@@ -1,0 +1,170 @@
+.makeEvent {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.innerCard {
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.formSection {
+    display: inline-block;
+    margin-left: 5%;
+    background: #ADD8E6;
+    padding-left: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.titleArea {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+}
+
+
+.headerBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerBtns i {
+    font-size: 40px;
+}
+
+.weekdayBtns {
+    display: flex;
+    width: 75vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roundedBtns {
+    background-color: #ffd1dc;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.each {
+    display: flex;
+    align-items: center;
+    margin-block-start: auto;
+    font-size: 20px;
+    white-space: nowrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+}
+
+.each i {
+    margin-right: 20%;
+}
+
+.timeSlot * {
+    display: inline;
+}
+
+.goalInput {
+    background-color: #f2f4f5;
+    border: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 40px;
+}
+
+.newSubtask {
+    display: flex;
+}
+
+.subtaskInp {
+    border: none;
+    background-color: #f2f4f5;
+    width: 100%;
+    height: 50px;
+}
+
+/* .wholeWrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+} */
+
+.allTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 2px;
+}
+
+.inputTag {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #E8E8E8;
+    width: 100%;
+    display: block;
+}
+
+.inputTag:focus {
+    border-color: #FFD1DC;
+}
+
+.oneLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.oneLine li {
+    font-size: 20px;
+}
+
+.createBtn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.toDoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toDoList {
+    padding: 10px;
+    background-color: #ffd1dc;
+    border-radius: 10px;
+}
+
+.toDoListInner {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.taskCount {
+    font-size: 13px;
+}

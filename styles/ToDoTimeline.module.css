@@ -1,0 +1,56 @@
+.container {
+    margin: 10% 9%;
+    padding: 1%;
+}
+
+.container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative; /** expands to height of container **/
+}
+
+.container ul:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed #949494;
+}
+
+.container ul li {
+    margin: 50px 60px;
+    position: relative;
+}
+
+.container ul li > span{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 0px;
+    height: 100%;
+    border: 1px solid #949494;
+}
+
+.container ul li > span:before, .container ul li > span:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #949494;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    left: -7px;
+}
+
+.container ul li > span:before {
+    top: -10px;
+}
+
+.container ul li > span:after {
+    top: 100%;
+}
+
