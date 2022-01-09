@@ -1,6 +1,6 @@
 import styles from "../styles/Main.module.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import 'font-awesome/css/font-awesome.min.css';
 export default function Header() {
     return (
         <div className={styles.main_header}>
@@ -15,7 +15,7 @@ export default function Header() {
             </form> */}
             <div className={styles.menu_icons}>
                 <a href="#">
-                    <i class="bi bi-bell"></i>
+                    <i className="bi bi-bell"></i>
                 </a>
                 <a href="#">
                     <img className={styles.profileImg} src="http://unsplash.it/36/36?gravity=center" alt=""></img>

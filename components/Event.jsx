@@ -1,6 +1,7 @@
 import styles from "../styles/MyEvent.module.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import React, {useState} from "react";
+import 'font-awesome/css/font-awesome.min.css';
 
 export default function Event(props) {
     const [note,setNote] = useState('');
@@ -131,13 +132,13 @@ export default function Event(props) {
                 <div className={styles.main}>
                     <div className={`${styles.col} ${styles.one} ${styles.left_side}`}>
                         <div className={styles.sec1} onClick={reset}>
-                            <i class="bi bi-x"></i>
+                            <i className="bi bi-x"></i>
                         </div>
                         <div className={styles.sec2}>
                             <label for="upload_img" className={styles.upload_img_label} id="upload_img_label">
                                 <div className={styles.upload_img_container}>
                                     <div className={styles.dotted_border}>
-                                        <i class="bi bi-cloud-upload"></i>
+                                        <i className="bi bi-cloud-upload"></i>
                                         <div>Click to upload</div>
                                         <div>Recommendation: Use high-quality .jpg files that are less than 20MB</div>
                                     </div>
@@ -187,7 +188,7 @@ export default function Event(props) {
                                 </select>
                             </div>
                             <div className={styles.sec1}>
-                                <i class="bi bi-check-lg"></i>
+                                <i className="bi bi-check-lg"></i>
                             </div>
                         </div>
                         <div className={styles.sec2}>
@@ -195,7 +196,7 @@ export default function Event(props) {
                                 <div className={styles.title}>
                                     <div className={styles.noteHeader}>
                                         <input id="title" className={styles.titleInp} placeholder="Create challenge!" onChange={(e)=>{setTitle(e.target.value)}}></input>
-                                        <i class="bi bi-pencil-fill"></i>
+                                        <i className="bi bi-pencil-fill"></i>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +222,7 @@ export default function Event(props) {
                                     <div>
                                         <b>Description</b>
                                     </div>
-                                    <i class="bi bi-pencil-fill"></i>
+                                    <i className="bi bi-pencil-fill"></i>
                                 </div>
                                 <textarea id="note" onChange={event => {
                                     setNote(event.target.value);

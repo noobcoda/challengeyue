@@ -2,6 +2,7 @@ import React,{ useState } from "react";
 import styles from "../styles/MakeEvent.module.css";
 import cs from "classNames";
 import SmallToDoList from "../components/SmallToDoList";
+import 'font-awesome/css/font-awesome.min.css';
 
 export default function MainTask() {
     const [todoItem,setTodoItem] = useState("");
@@ -78,7 +79,7 @@ export default function MainTask() {
                             <li onClick={()=>handleToggle(id)} 
                             className={cs('item',{'done':done})}>{name}</li>
                             <button className={styles.createBtn} onClick={()=>handleDelete(id)}>
-                                <i class="bi bi-trash"></i>
+                                <i className="bi bi-trash"></i>
                             </button>
                         </div>
                     ))}

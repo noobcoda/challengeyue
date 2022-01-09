@@ -1,4 +1,5 @@
 import styles from "../styles/MainPageLower.module.css";
+import 'font-awesome/css/font-awesome.min.css';
 
 export default function AnEvent(props) {
   return (
@@ -26,13 +27,13 @@ export default function AnEvent(props) {
           </div>
           <div className={styles.buttons}>
               <button className={styles.optionBtn}>
-                  <i class="bi bi-book"></i>
+                  <i className="bi bi-book"></i>
                   <span>
                       DETAILS
                   </span>
               </button>
               <button className={styles.optionBtn}>
-                  <i class="bi bi-plus-square"></i>
+                  <i className="bi bi-plus-square"></i>
                   <span>
                       JOIN
                   </span>
