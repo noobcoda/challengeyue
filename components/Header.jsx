@@ -1,7 +1,9 @@
 import styles from "../styles/Main.module.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'font-awesome/css/font-awesome.min.css';
+
 export default function Header() {
+
     return (
         <div className={styles.main_header}>
             <a href="#">
