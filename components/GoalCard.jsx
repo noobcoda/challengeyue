@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function GoalCard() {
     return (
-        <div class={styles.card}>
+        <div className={styles.card}>
             <div className={styles.header}>
                 <div className={styles.title}>Task title</div>
                 <div>17:29</div>

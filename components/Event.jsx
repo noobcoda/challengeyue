@@ -135,7 +135,7 @@ export default function Event(props) {
                             <i className="bi bi-x"></i>
                         </div>
                         <div className={styles.sec2}>
-                            <label for="upload_img" className={styles.upload_img_label} id="upload_img_label">
+                            <label htmlFor="upload_img" className={styles.upload_img_label} id="upload_img_label">
                                 <div className={styles.upload_img_container}>
                                     <div className={styles.dotted_border}>
                                         <i className="bi bi-cloud-upload"></i>
