@@ -1,26 +1,27 @@
 import styles from "../styles/Main.module.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { useContext } from "react";
+import AuthContext from "../stores/authContext";
 
 export default function Header() {
+    const {user, login, logout} = useContext(AuthContext);
+    console.log(user);
 
     return (
         <div className={styles.main_header}>
             <a href="#">
                 <img src="" alt="App logo" className={styles.app_logo} />
             </a>
-            {/* <form className={styles.search_bar}>
-                <input className={styles.search_input} type="search" placeholder="Search" aria-label="Search" />
-                <button type="submit" className={styles.search_btn}>
-                    <i class="bi bi-search"></i>
-                </button>
-            </form> */}
             <div className={styles.menu_icons}>
                 <a href="#">
-                    <i className="bi bi-bell"></i>
+                    <p>Features</p>
                 </a>
                 <a href="#">
-                    <img className={styles.profileImg} src="http://unsplash.it/36/36?gravity=center" alt=""></img>
+                    <p onClick={login}>Login/Signup</p>
+                </a>
+                <a href="#">
+                    <p onClick={logout}>Log out</p>
                 </a>
             </div>
         </div>
