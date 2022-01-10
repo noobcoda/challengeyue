@@ -14,15 +14,17 @@ export default function Header() {
                 <img src="" alt="App logo" className={styles.app_logo} />
             </a>
             {authReady && (
-                <div className={styles.menu_icons}>
-                    {!user && <a href="#"><p>Features</p></a>}
-                    {!user && <a href="#"><p onClick={login}>Login/Signup</p></a>}
-                    {user && <a href="#"><i className="bi bi-bell"></i></a>}
-                    {user && <a href="#"><img className={styles.profileImg} src="http://unsplash.it/36/36?gravity=center" alt=""></img></a>}
-                    {user && <a href="#"><p onClick={logout}>Log out</p></a>}
-
+                <div>
+                    <div className={styles.menu_icons}>
+                        {!user && <a href="#"><p>Features</p></a>}
+                        {!user && <a href="#"><p onClick={login}>Login/Signup</p></a>}
+                        {user && <a href="#"><i className="bi bi-bell"></i></a>}
+                        {user && <a href="#"><img className={styles.profileImg} src="http://unsplash.it/36/36?gravity=center" alt=""></img></a>}
+                        {user && <a href="#"><p onClick={logout}>Log out</p></a>}
+                    </div>
                 </div>
-            )}
+                )
+            }
         </div>
     )
 }

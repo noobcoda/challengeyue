@@ -26,7 +26,7 @@ export const AuthContextProvider = ({ children }) => {
             console.log("Logout event");
         })
 
-        NetlifyIdentityWidget.on('widget',()=>{
+        NetlifyIdentityWidget.on('init',()=>{
             setUser(user);
             setAuthReady(true);
             console.log("Init event");
