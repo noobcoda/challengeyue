@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
+    "@types/netlify-identity-widget": "^1.9.2",
     "bootstrap-icons": "^1.7.2",
     "classnames": "^2.3.1",
     "date-fns": "^2.27.0",
