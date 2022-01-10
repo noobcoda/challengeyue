@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 import styles from "../styles/MakeEvent.module.css";
-import cs from "classNames";
+import cs from "classnames";
 import 'font-awesome/css/font-awesome.min.css';
 
 export default function MainTask() {
