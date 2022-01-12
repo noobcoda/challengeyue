@@ -1,0 +1,59 @@
+type Account {
+    email: String! @id
+    profile: Profile @relation
+}
+
+type Profile {
+    name: String!
+    icon: String
+    preferences: [ String! ]  
+    challengesFollowing: [ Challenge! ] @relation(name:"challenges_following")
+    challengesCreated: [ Challenge! ] @relation(name:"challenges_created")
+    posts: [ Submission! ]
+}
+
+type Challenge {
+    name: String!
+    creators: [ Profile! ] @relation(name:"challenges_created")
+    followers: [ Profile ]  @relation(name:"challenges_following")
+    type: String!
+    start: String!
+    end: String!
+    subtasks: [ Task! ] 
+    description: String
+    icon: String
+}
+
+type Task { 
+    name: String!
+    description: String
+    submissions: [ Submission! ]
+    challenge: Challenge!
+}
+
+type Submission {
+    post: String!
+    description: String
+    owner: Profile! 
+    comments: [ Comment! ]
+    createdAt: String!
+    likes: [ Like! ] 
+    task: Task! 
+}
+
+type Comment {
+    body: String!
+    owner: Profile!
+    submission: Submission!
+    createdAt: String
+}
+
+type Like {
+    owner: Profile!
+    post: Submission!
+    createdAt: String
+}
+
+type Query {
+    allUserAccounts: [Account!]
+}

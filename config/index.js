@@ -1,3 +1,2 @@
 const dev = process.env.NODE_ENV !== 'production';
-
-export const server = dev ? 'http://localhost:3000' : 'https://yourwebsite.com'
+const FAUNAKEY = "fnAEcvKwCyAAx4lGXLdb0JcVXSfKjzS7Gi9ItX98";

@@ -13,7 +13,7 @@ export default function Header() {
             <a href="#">
                 <img src="" alt="App logo" className={styles.app_logo} />
             </a>
-            {authReady && (
+            {/* {authReady && ( */}
                 <div>
                     <div className={styles.menu_icons}>
                         {!user && <a href="#"><p>Features</p></a>}
@@ -23,8 +23,8 @@ export default function Header() {
                         {user && <a href="#"><p onClick={logout}>Log out</p></a>}
                     </div>
                 </div>
-                )
-            }
+                {/* )
+            } */}
         </div>
     )
 }
