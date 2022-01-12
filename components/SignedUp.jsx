@@ -18,8 +18,9 @@ export default function SignedUp() {
         if (authReady){
             fetch("/.netlify/functions/auth", user && {
                 headers: {
-                    Authorization: 'Bearer ' + user.token.access_token
-                }
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
             })
             .then(res => res.json())
             .then(data => console.log(data))

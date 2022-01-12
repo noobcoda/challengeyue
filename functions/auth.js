@@ -1,22 +1,13 @@
-import faunadb from 'faunadb';
-const q = faunadb.query
-const client = new faunadb.Client({
-    secret: process
-})
+// import {listAllUsers} from ""
 
 exports.handler = async(event,context) => {
     console.log("function ran");
-
-    const data = {
-        name: "Mario",
-        age: "35",
-        job: "plumber"
-    }
+    console.log("just getting all users first")
 
     if (context.clientContext.user) {
         return {
             statusCode: 200,
-            body: JSON.stringify(data)
+            body: JSON.stringify({msg:"Hi"}),
         }
     }
 

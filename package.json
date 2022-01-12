@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.7",
     "@material-ui/icons": "^4.11.2",
     "@types/netlify-identity-widget": "^1.9.2",
     "bootstrap-icons": "^1.7.2",
@@ -17,6 +18,8 @@
     "faunadb": "^4.4.1",
     "flatpickr": "^4.6.9",
     "font-awesome": "^4.7.0",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
     "mongoose": "^6.1.2",
     "netlify-identity-widget": "^1.9.2",
     "next": "12.0.7",

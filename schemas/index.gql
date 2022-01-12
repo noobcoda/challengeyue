@@ -55,5 +55,6 @@ type Like {
 }
 
 type Query {
-    allUserAccounts: [Account!]
+    entries: [Account!]
+        @resolver(name:"listAllUsers",paginated:true)
 }
