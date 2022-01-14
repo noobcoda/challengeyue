@@ -5,27 +5,43 @@ import Event from "../components/Event";
 import MainPageLower from "../components/MainPageLower";
 import { useContext } from "react";
 import AuthContext from "../stores/authContext";
+import {useQuery,useMutation} from '@apollo/client';
+import SIGNUP from "../queries/register";
 
-export default function SignedUp() {
+const SignedUp = () => {
     const {user,authReady} = useContext(AuthContext);
     console.log(user);
+    //const [registerUser, {data,loading,error}] = useMutation(SIGNUP);
+    
+    if (authReady){
+        // if (loading) return "Loading...";
+        // if (error) return `Error! ${error.message}`;
+        // registerUser({variables:{name:"Admin",email:"yuemaykl@gmail.com"}})
+        return <SignedUpComponent />
+    }
+
+}
+
+const SignedUpComponent = () => {
+    const {user} = useContext(AuthContext);
     const [addEvent,setAddEvent] = useState(false);
     function showEvent(){
         setAddEvent(addEvent => !addEvent);
     }
 
-    useEffect(()=>{
-        if (authReady){
-            fetch("/.netlify/functions/auth", user && {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                },
-            })
-            .then(res => res.json())
-            .then(data => console.log(data))
-        }
-    },[user])
+    // useEffect(()=>{
+        
+
+    //         // user && {
+    //         //     headers: {
+    //         //         "Content-Type": "application/json",
+    //         //         "Accept": "application/json",
+    //         //     },
+    //         // })
+    //         // .then(res => res.json())
+    //         // .then(data => console.log(data))
+    //     }
+    // },[user])
 
     return (
         <div>
@@ -46,3 +62,5 @@ export default function SignedUp() {
         </div>
     )
 }
+
+export default SignedUp;

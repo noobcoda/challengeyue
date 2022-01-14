@@ -10,6 +10,7 @@ type Profile {
     challengesFollowing: [ Challenge! ] @relation(name:"challenges_following")
     challengesCreated: [ Challenge! ] @relation(name:"challenges_created")
     posts: [ Submission! ]
+    doneTasks: [Task]
 }
 
 type Challenge {
@@ -29,6 +30,7 @@ type Task {
     description: String
     submissions: [ Submission! ]
     challenge: Challenge!
+    completedBy: [Profile]
 }
 
 type Submission {
@@ -55,6 +57,6 @@ type Like {
 }
 
 type Query {
-    entries: [Account!]
-        @resolver(name:"listAllUsers",paginated:true)
+    listUsers: [Profile] 
+    listChallenges: [Challenge] 
 }
